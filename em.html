@@ -31,13 +31,18 @@
         }
       }
   console.log(window.CROWDSMART_TOKEN_USER.token);
+  
+  function show_token() {
+      document.getElementById('ptoken').innerHTML = window.CROWDSMART_TOKEN_USER.token;
+  }
+  
   </script>
 
 
 <html>
-<body>
+<body onload="show_token();">
 <h1>CrowdSmart user token example</h1>
-<p> This is a simple demo page demonstrating how to set the user token using URL paramters.
+<p> This is a simple demo page demonstrating how to set user tokens using URL paramters.
 <p> The current user token is: 
       <h3>
       <p id="ptoken"></p>      
@@ -51,10 +56,6 @@
       id="crowdsmart-embed-script"
       data-embed-url="https://stage-app.crowdsmart.ai/embed/evaluation/csinnovate/02f50f9c-53a2-11ec-b705-0686f2812bf3/15be69e8-53b0-11ed-9a9a-06b90baf9d9f">
   </script>
-  <script>
-      document.getElementById('ptoken').innerHTML = window.CROWDSMART_TOKEN_USER.token;
-  </script>
-
 </body>
 </html>
 
