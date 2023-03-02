@@ -2,8 +2,14 @@
 <head>
 
       <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      console.log(urlParams.has('user'));
+      const csu = urlParams.get('user')
+      console.log(csu);
+            
       window.CROWDSMART_TOKEN_USER = {
-  token: 'uniq_u_token'
+  token: csu
   }
       window.CROWDSMART_EMBED_CONFIG = {
         crowdSmartConfig: {
@@ -19,6 +25,7 @@
           }
         }
       }
+  console.log(window.CROWDSMART_TOKEN_USER);
   </script>
 
 
