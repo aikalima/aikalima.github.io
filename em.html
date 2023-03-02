@@ -2,11 +2,11 @@
 <head>
 
       <script>
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      console.log(urlParams.has('user'));
-      const csu = urlParams.get('user')
-      console.log(csu);
+      const CROWDSMART_PARAMS = new URLSearchParams(window.location.search);
+      if (CROWDSMART_PARAMS.has('csu')) {
+            const csu = CROWDSMART_PARAMS.get('csu')
+            console.log(csu);
+      }
             
       window.CROWDSMART_TOKEN_USER = {
   token: csu
