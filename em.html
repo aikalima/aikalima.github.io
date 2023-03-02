@@ -2,16 +2,20 @@
 <head>
 
       <script>
-      const CROWDSMART_PARAMS = new URLSearchParams(window.location.search);
-      const user_token = "unique_token"
-      if (CROWDSMART_PARAMS.has('dcsu')) {
-            const user_token = CROWDSMART_PARAMS.get('dcsu')
-            console.log(user_token);
+      window.CROWDSMART_TOKEN_USER = {
+                  token: 'undefined_token'
       }
             
-      window.CROWDSMART_TOKEN_USER = {
-  token: user_token
-  }
+      const CROWDSMART_PARAMS = new URLSearchParams(window.location.search);
+      user_token = "not_set"
+      if (CROWDSMART_PARAMS.has('dcsu')) {
+            user_token = CROWDSMART_PARAMS.get('dcsu')
+            window.CROWDSMART_TOKEN_USER = {
+                  token: user_token
+            }
+      }
+      print(window.CROWDSMART_TOKEN_USER)
+            
       window.CROWDSMART_EMBED_CONFIG = {
         crowdSmartConfig: {
           cta: {
@@ -32,9 +36,12 @@
 
 <html>
 <body>
-<h1>Hallodri LESS</h1>
-<p> This is a simple demo page demonstrating the CrowdSmart embed app
-<p> Evaluation "testing 123"  
+<h1>CrowdSmart Embed APP</h1>
+<p> This is a simple demo page demonstrating how to set the user token using URL paramters
+<p> The current user token is:
+      <script type="text/javascript">
+        document.write(window.CROWDSMART_TOKEN_USER)
+      </script>
 <br>
 </p>
 
