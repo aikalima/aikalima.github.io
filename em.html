@@ -14,7 +14,7 @@
                   token: user_token
             }
       }
-      print(window.CROWDSMART_TOKEN_USER)
+      print(window.CROWDSMART_TOKEN_USER.token)
             
       window.CROWDSMART_EMBED_CONFIG = {
         crowdSmartConfig: {
@@ -30,18 +30,18 @@
           }
         }
       }
-  console.log(window.CROWDSMART_TOKEN_USER);
+  console.log(window.CROWDSMART_TOKEN_USER.token);
   </script>
 
 
 <html>
 <body>
-<h1>CrowdSmart Embed APP</h1>
+<h1>CrowdSmart setting embed app user token example</h1>
 <p> This is a simple demo page demonstrating how to set the user token using URL paramters
-<p> The current user token is:
+<p> The current user token is: <h3>
       <script type="text/javascript">
-        document.write(window.CROWDSMART_TOKEN_USER)
-      </script>
+        document.write(window.CROWDSMART_TOKEN_USER.token)
+      </script> </h3>
 <br>
 </p>
 
