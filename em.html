@@ -3,15 +3,13 @@
 
       <script>
       window.CROWDSMART_TOKEN_USER = {
-                  token: 'undefined_token'
+                  token: 'user_abcdef'
       }
             
       const CROWDSMART_PARAMS = new URLSearchParams(window.location.search);
-      user_token = "not_set"
       if (CROWDSMART_PARAMS.has('dcsu')) {
-            user_token = CROWDSMART_PARAMS.get('dcsu')
             window.CROWDSMART_TOKEN_USER = {
-                  token: user_token
+                  token: CROWDSMART_PARAMS.get('dcsu')
             }
       }
             
